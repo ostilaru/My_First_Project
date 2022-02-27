@@ -1,4 +1,4 @@
-# 需求:破解百度翻译
+# 需求:破解金山翻译
 # -post请求（携带了参数）
 # 响应数据是一组json数据
 
@@ -22,6 +22,7 @@ class King(object):
         return response.content
 
     def parse_data(self, data):
+        # loads()可以把json串转化为content
         dic_data = json.loads(data)
         print(dic_data['content']['out'])
 
